@@ -1,0 +1,10 @@
+services:
+  mtr-stremio:
+    image: ghcr.io/baloo2/mtr-stremio:latest
+    container_name: mtr-stremio
+    environment:
+      - PORT=7000
+      - LOG_REQUESTS=false
+    ports:
+      - 7000:7000
+    restart: unless-stopped
